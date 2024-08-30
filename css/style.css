@@ -228,7 +228,6 @@ button {
 
 
 /* Header section start */
-/* Header section start */
 .header_section {
     width: 100%;
     background-image: url(../images/banner2.png);
@@ -255,16 +254,22 @@ button {
     z-index: 2;
 }
 
+/* Navbar styles */
 .navbar {
     padding: 10px 0;
+    position: relative;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .navbar-toggler {
     border-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 10px;
 }
 
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 .navbar-nav {
@@ -288,6 +293,43 @@ button {
     color: #f8ca29;
 }
 
+/* Media queries for responsiveness */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        max-height: none;
+        overflow-y: auto;
+    }
+
+    .navbar-nav {
+        padding: 10px 0;
+    }
+
+    .nav-item {
+        margin: 5px 15px;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 0;
+        display: inline-block;
+    }
+}
+
+/* Ensure navbar is always visible on mobile */
+@media (max-width: 991px) {
+    .navbar-collapse.collapse {
+        display: block !important;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+}
+
 /* Banner section start */
 .banner_section {
     padding: 50px 0 30px;
@@ -296,7 +338,6 @@ button {
 .banner_taital_main {
     max-width: 100%;
     padding-left: 40px;
-    /* Increased left padding */
     text-align: left;
 }
 
@@ -392,16 +433,39 @@ button {
 @media (max-width: 768px) {
     .header_section {
         padding: 10px 0 30px;
+        min-height: 100vh;
+        /* Ensure full viewport height */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header_content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 1000;
     }
 
     .banner_section {
         padding: 30px 0 20px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .banner_taital_main {
-        padding-left: 25px;
-        /* Slightly reduced padding for mobile */
+        padding-left: 15px;
         padding-right: 15px;
+        text-align: center;
     }
 
     .banner_taital {
@@ -416,10 +480,17 @@ button {
         width: 150px;
         height: 150px;
     }
+
+    .row {
+        flex-direction: column-reverse;
+    }
+
+    .col-md-6 {
+        width: 100%;
+    }
 }
 
-/*banner*/
-
+/*banner end*/
 .services_section {
     padding: 80px 0;
     background-color: #ffffff;
