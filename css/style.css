@@ -295,7 +295,8 @@ button {
 
 .banner_taital_main {
     max-width: 100%;
-    padding-left: 40px; /* Increased left padding */
+    padding-left: 40px;
+    /* Increased left padding */
     text-align: left;
 }
 
@@ -392,29 +393,31 @@ button {
     .header_section {
         padding: 10px 0 30px;
     }
-    
+
     .banner_section {
         padding: 30px 0 20px;
     }
-    
+
     .banner_taital_main {
-        padding-left: 25px; /* Slightly reduced padding for mobile */
+        padding-left: 25px;
+        /* Slightly reduced padding for mobile */
         padding-right: 15px;
     }
-    
+
     .banner_taital {
         font-size: 28px;
     }
-    
+
     .summary_text {
         font-size: 12px;
     }
-    
+
     .profile_pic {
         width: 150px;
         height: 150px;
     }
 }
+
 /*banner*/
 
 .services_section {
@@ -662,6 +665,7 @@ button {
         /* Reduce padding on smaller screens */
     }
 }
+
 /*experience end*/
 
 /*skills start */
@@ -774,6 +778,8 @@ button {
 
 /* Footer section start */
 
+/* Footer section start */
+
 .footer_section {
     width: 100%;
     background-color: #252f2d;
@@ -782,13 +788,11 @@ button {
 
 .footer_content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
-    max-width: 1200px; /* Adjust this value as needed */
-    margin: 0 auto; /* Centers the content */
-    padding-left: 200px; /* Adds padding to the left */
-    padding-right: 100px; 
-
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .contact_info,
@@ -796,6 +800,10 @@ button {
     flex: 1;
     min-width: 250px;
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .contact_info h3,
@@ -810,6 +818,9 @@ button {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contact_info li {
@@ -817,6 +828,7 @@ button {
     color: #fefefd;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .contact_info li i {
@@ -837,7 +849,8 @@ button {
 }
 
 .social_links ul {
-    display: flex;
+    flex-direction: row;
+    justify-content: center;
     gap: 15px;
 }
 
@@ -877,23 +890,13 @@ button {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .footer_content {
-        justify-content: center; /* Center content on mobile */
-        padding-left: 10px; /* Reduce padding for mobile */
-        padding-right: 10px; /* Reduce padding for mobile */
+        flex-direction: column;
+        align-items: center;
     }
 
-    .contact_info, .social_links {
-        min-width: 100%; /* Ensure full width on mobile */
-        justify-content: center; /* Center content on mobile */
+    .contact_info,
+    .social_links {
+        width: 100%;
         max-width: 300px;
-        padding-left: 0;
-    }
-
-    .contact_info li {
-        justify-content: flex-start;
-    }
-
-    .social_links ul {
-        justify-content: flex-start;
     }
 }
