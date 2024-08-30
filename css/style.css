@@ -787,6 +787,8 @@ button {
     max-width: 1200px; /* Adjust this value as needed */
     margin: 0 auto; /* Centers the content */
     padding-left: 200px; /* Adds padding to the left */
+    padding-right: 100px; 
+
 }
 
 .contact_info,
