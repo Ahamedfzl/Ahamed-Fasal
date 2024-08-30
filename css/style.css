@@ -785,7 +785,7 @@ button {
     flex-wrap: wrap;
     max-width: 1200px; /* Adjust this value as needed */
     margin: 0 auto; /* Centers the content */
-    padding-left: 20px; /* Adds padding to the left */
+    padding-left: 80px; /* Adds padding to the left */
     padding-right: 20px; /* Adds padding to the right */
 }
 
