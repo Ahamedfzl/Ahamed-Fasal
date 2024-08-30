@@ -716,7 +716,7 @@ button {
     color: #4a4a4a;
     margin-bottom: 15px;
     padding-bottom: 10px;
-    border-bottom: 2px solid #6c5ce7;
+    border-bottom: 2px solid #3b3a3a;
 }
 
 .skill-item {
@@ -775,24 +775,22 @@ button {
     }
 }
 
-
-/* Footer section start */
-
 /* Footer section start */
 
 .footer_section {
     width: 100%;
     background-color: #252f2d;
-    padding: 60px 0px 45px 0px;
+    padding: 80px 0px 40px 0px;
 }
 
 .footer_content {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    padding-left: 200px;
 }
 
 .contact_info,
@@ -802,8 +800,8 @@ button {
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: left;
+    text-align: left;
 }
 
 .contact_info h3,
@@ -820,15 +818,15 @@ button {
     margin: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
 }
 
 .contact_info li {
     margin-bottom: 15px;
     color: #fefefd;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
 }
 
 .contact_info li i {
@@ -850,18 +848,33 @@ button {
 
 .social_links ul {
     flex-direction: row;
-    justify-content: center;
+    justify-content: left;
     gap: 15px;
 }
 
 .social_links li a {
     color: #fefefd;
     font-size: 20px;
-    transition: color 0.3s ease;
+    transition: color 0.2s ease;
 }
 
 .social_links li a:hover {
     color: #f8ca29;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer_content {
+        flex-direction: column;
+        align-items: left;
+        padding-left: 100px;
+    }
+
+    .contact_info,
+    .social_links {
+        width: 100%;
+        max-width: 300px;
+    }
 }
 
 /* Copyright section start */
@@ -885,18 +898,4 @@ button {
 
 .copyright_text a:hover {
     color: #f8ca29;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .footer_content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact_info,
-    .social_links {
-        width: 100%;
-        max-width: 300px;
-    }
 }
