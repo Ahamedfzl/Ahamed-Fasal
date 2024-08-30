@@ -759,8 +759,6 @@ button {
     flex: 1;
     min-width: 250px;
     margin-bottom: 30px;
-    padding-left: 250px;
-
 }
 
 .contact_info h3,
@@ -843,19 +841,22 @@ button {
 @media (max-width: 768px) {
     .footer_content {
         flex-direction: column;
+        align-items: center;
     }
 
     .contact_info,
     .social_links {
         width: 100%;
-        text-align: center;
+        max-width: 300px;
+        text-align: left;
+        padding-left: 0;
     }
 
     .contact_info li {
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     .social_links ul {
-        justify-content: center;
+        justify-content: flex-start;
     }
 }
