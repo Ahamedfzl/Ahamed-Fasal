@@ -270,7 +270,6 @@ button {
 .navbar-nav {
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
 }
 
 .nav-item {
@@ -296,8 +295,8 @@ button {
 
 .banner_taital_main {
     max-width: 100%;
-    padding-left: 0;
-    text-align: left;
+    padding-left: 15px; /* Add some left padding */
+    text-align: left; /* Align text to the left */
 }
 
 .banner_text {
@@ -319,7 +318,6 @@ button {
     color: #ffffff;
     line-height: 1.6;
     margin-bottom: 20px;
-    padding-left: 0;
 }
 
 .btn-primary {
@@ -397,6 +395,11 @@ button {
     
     .banner_section {
         padding: 30px 0 20px;
+    }
+    
+    .banner_taital_main {
+        padding-left: 15px; /* Maintain left padding on mobile */
+        padding-right: 15px; /* Add right padding for balance */
     }
     
     .banner_taital {
