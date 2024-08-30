@@ -786,7 +786,7 @@ button {
     flex-wrap: wrap;
     max-width: 1200px; /* Adjust this value as needed */
     margin: 0 auto; /* Centers the content */
-    padding-left: 100px; /* Adds padding to the left */
+    padding-left: 200px; /* Adds padding to the left */
 }
 
 .contact_info,
@@ -882,7 +882,7 @@ button {
 
     .contact_info, .social_links {
         min-width: 100%; /* Ensure full width on mobile */
-        text-align: center; /* Center text on mobile */
+        justify-content: center; /* Center content on mobile */
         max-width: 300px;
         padding-left: 0;
     }
