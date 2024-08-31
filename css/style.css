@@ -255,17 +255,23 @@ button {
 }
 
 /* Navbar tog */
-.navbar-toggler {
+.navbar .navbar-toggler {
     border: none;
-    background-color: #f8ca29;
+    background-color: #f8ca29 !important;
     /* Yellow background */
     cursor: pointer;
     padding: 10px;
     border-radius: 4px;
-    /* Optional: adds rounded corners */
 }
 
-.hamburger-icon {
+/* Remove default Bootstrap styles */
+.navbar .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Hamburger icon styles */
+.navbar .navbar-toggler .hamburger-icon {
     width: 30px;
     height: 20px;
     position: relative;
@@ -273,12 +279,12 @@ button {
     transition: .5s ease-in-out;
 }
 
-.hamburger-icon span {
+.navbar .navbar-toggler .hamburger-icon span {
     display: block;
     position: absolute;
     height: 3px;
     width: 100%;
-    background: #000000;
+    background: #000000 !important;
     /* Black lines */
     border-radius: 9px;
     opacity: 1;
@@ -287,31 +293,42 @@ button {
     transition: .25s ease-in-out;
 }
 
-.hamburger-icon span:nth-child(1) {
+.navbar .navbar-toggler .hamburger-icon span:nth-child(1) {
     top: 0px;
 }
 
-.hamburger-icon span:nth-child(2) {
+.navbar .navbar-toggler .hamburger-icon span:nth-child(2) {
     top: 10px;
 }
 
-.hamburger-icon span:nth-child(3) {
+.navbar .navbar-toggler .hamburger-icon span:nth-child(3) {
     top: 20px;
 }
 
-.navbar-toggler[aria-expanded="true"] .hamburger-icon span:nth-child(1) {
+/* Hamburger icon animation */
+.navbar .navbar-toggler[aria-expanded="true"] .hamburger-icon span:nth-child(1) {
     top: 10px;
     transform: rotate(135deg);
 }
 
-.navbar-toggler[aria-expanded="true"] .hamburger-icon span:nth-child(2) {
+.navbar .navbar-toggler[aria-expanded="true"] .hamburger-icon span:nth-child(2) {
     opacity: 0;
     left: -60px;
 }
 
-.navbar-toggler[aria-expanded="true"] .hamburger-icon span:nth-child(3) {
+.navbar .navbar-toggler[aria-expanded="true"] .hamburger-icon span:nth-child(3) {
     top: 10px;
     transform: rotate(-135deg);
+}
+
+.navbar .navbar-toggler:hover,
+.navbar .navbar-toggler:focus,
+.navbar .navbar-toggler:active {
+    background-color: #f8ca29 !important;
+}
+
+.navbar .navbar-toggler-icon {
+    background-image: none !important;
 }
 
 /* Existing navbar styles */
