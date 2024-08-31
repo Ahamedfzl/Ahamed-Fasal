@@ -301,8 +301,14 @@ button {
         top: 100%;
         left: 0;
         right: 0;
-        max-height: none;
-        overflow-y: auto;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+
+    .navbar-collapse.show {
+        max-height: 500px;
+        /* Adjust this value as needed */
     }
 
     .navbar-nav {
@@ -319,16 +325,7 @@ button {
     }
 }
 
-/* Ensure navbar is always visible on mobile */
-@media (max-width: 991px) {
-    .navbar-collapse.collapse {
-        display: block !important;
-    }
-
-    .navbar-toggler {
-        display: none;
-    }
-}
+/* Rest of the CSS remains unchanged */
 
 /* Banner section start */
 .banner_section {
