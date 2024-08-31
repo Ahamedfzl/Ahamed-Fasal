@@ -266,6 +266,8 @@ button {
     border-color: #ffffff;
     background-color: rgba(255, 255, 255, 0.1);
     padding: 5px 10px;
+    display: none;
+    /* Hide by default, show on smaller screens */
 }
 
 .navbar-toggler-icon {
@@ -295,6 +297,11 @@ button {
 
 /* Media queries for responsiveness */
 @media (max-width: 991px) {
+    .navbar-toggler {
+        display: block;
+        /* Show toggle button on smaller screens */
+    }
+
     .navbar-collapse {
         background-color: rgba(0, 0, 0, 0.9);
         position: absolute;
@@ -308,7 +315,6 @@ button {
 
     .navbar-collapse.show {
         max-height: 500px;
-        /* Adjust this value as needed */
     }
 
     .navbar-nav {
@@ -324,8 +330,6 @@ button {
         display: inline-block;
     }
 }
-
-/* Rest of the CSS remains unchanged */
 
 /* Banner section start */
 .banner_section {
@@ -431,10 +435,10 @@ button {
     .header_section {
         padding: 10px 0 30px;
         min-height: 100vh;
-        /* Ensure full viewport height */
         display: flex;
         flex-direction: column;
     }
+
 
     .header_content {
         flex-grow: 1;
