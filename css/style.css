@@ -254,24 +254,72 @@ button {
     z-index: 2;
 }
 
-/* Navbar styles */
+/* Navbar tog */
+.navbar-toggler {
+    border: none;
+    background-color: #f8ca29;
+    /* Yellow background */
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+    /* Optional: adds rounded corners */
+}
+
+.hamburger-icon {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+}
+
+.hamburger-icon span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #000000;
+    /* Black lines */
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.hamburger-icon span:nth-child(1) {
+    top: 0px;
+}
+
+.hamburger-icon span:nth-child(2) {
+    top: 10px;
+}
+
+.hamburger-icon span:nth-child(3) {
+    top: 20px;
+}
+
+.navbar-toggler[aria-expanded="true"] .hamburger-icon span:nth-child(1) {
+    top: 10px;
+    transform: rotate(135deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .hamburger-icon span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+
+.navbar-toggler[aria-expanded="true"] .hamburger-icon span:nth-child(3) {
+    top: 10px;
+    transform: rotate(-135deg);
+}
+
+/* Existing navbar styles */
 .navbar {
     padding: 10px 0;
     position: relative;
     z-index: 1000;
     background-color: rgba(0, 0, 0, 0.8);
-}
-
-.navbar-toggler {
-    border-color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 5px 10px;
-    display: none;
-    /* Hide by default, show on smaller screens */
-}
-
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 .navbar-nav {
@@ -295,13 +343,7 @@ button {
     color: #f8ca29;
 }
 
-/* Media queries for responsiveness */
 @media (max-width: 991px) {
-    .navbar-toggler {
-        display: block;
-        /* Show toggle button on smaller screens */
-    }
-
     .navbar-collapse {
         background-color: rgba(0, 0, 0, 0.9);
         position: absolute;
