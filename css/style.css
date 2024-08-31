@@ -638,19 +638,6 @@ button {
     color: #f8ca29;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-    color: #f8ca29;
-}
-
-.swiper-pagination-bullet {
-    background-color: #cccccc;
-    opacity: 1;
-}
-
-.swiper-pagination-bullet-active {
-    background-color: #f8ca29;
-}
 
 @media (max-width: 768px) {
     .services_taital {
@@ -1029,4 +1016,49 @@ button {
 
 .copyright_text a:hover {
     color: #f8ca29;
+}
+
+/* Ensure this CSS is loaded after all other stylesheets */
+
+.services_section .swiper-container .swiper-button-next,
+.services_section .swiper-container .swiper-button-prev {
+    color: #ffffff !important;
+    /* White arrows */
+}
+
+.services_section .swiper-container .swiper-button-next::after,
+.services_section .swiper-container .swiper-button-prev::after {
+    font-size: 24px !important;
+    /* Adjust size as needed */
+}
+
+.services_section .swiper-container .swiper-pagination-bullet {
+    background-color: #cccccc !important;
+    /* Light gray inactive bullets */
+    opacity: 1 !important;
+}
+
+.services_section .swiper-container .swiper-pagination-bullet-active {
+    background-color: #000000 !important;
+    /* Black active bullet */
+}
+
+/* Optional: Add contrast to arrows if needed */
+.services_section .swiper-container .swiper-button-next,
+.services_section .swiper-container .swiper-button-prev {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Ensure arrows are visible */
+.services_section .swiper-container .swiper-button-next,
+.services_section .swiper-container .swiper-button-prev {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Optional: Hover effects */
+.services_section .swiper-container .swiper-button-next:hover,
+.services_section .swiper-container .swiper-button-prev:hover {
+    color: #f8ca29 !important;
+    /* Yellow on hover, adjust as needed */
 }
