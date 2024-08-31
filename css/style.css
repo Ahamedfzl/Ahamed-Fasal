@@ -422,19 +422,57 @@ button {
     margin-bottom: 20px;
 }
 
+/* Updated button styles */
+.btn-primary,
+.btn-outline-primary {
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    outline: none;
+    /* Remove default outline */
+}
+
+.btn-primary:focus,
+.btn-outline-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(128, 128, 128, 0.5);
+    /* Grey focus outline */
+}
+
 .btn-primary {
     background-color: #f8ca29;
     border-color: #f8ca29;
     color: #333;
-    font-weight: bold;
-    padding: 10px 20px;
-    transition: all 0.3s ease;
 }
 
-.btn-primary:hover {
-    background-color: #333;
-    border-color: #333;
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: #333 !important;
+    border-color: #333 !important;
+    color: #f8ca29 !important;
+}
+
+.btn-outline-primary {
+    background-color: transparent;
+    border-color: #f8ca29;
     color: #f8ca29;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+    background-color: #f8ca29 !important;
+    border-color: #f8ca29 !important;
+    color: #333 !important;
+}
+
+/* Media query for responsive buttons */
+@media (max-width: 576px) {
+    .banner_taital_main .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }
 
 .profile_pic {
@@ -546,6 +584,17 @@ button {
     }
 
     .col-md-6 {
+        width: 100%;
+    }
+}
+
+.banner_taital_main .btn {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 576px) {
+    .banner_taital_main .btn {
+        display: block;
         width: 100%;
     }
 }
