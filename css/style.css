@@ -272,8 +272,8 @@ button {
 
 /* Hamburger icon styles */
 .navbar .navbar-toggler .hamburger-icon {
-    width: 30px;
-    height: 20px;
+    width: 25px;
+    height: 18px;
     position: relative;
     transform: rotate(0deg);
     transition: .5s ease-in-out;
@@ -298,11 +298,11 @@ button {
 }
 
 .navbar .navbar-toggler .hamburger-icon span:nth-child(2) {
-    top: 10px;
+    top: 8px;
 }
 
 .navbar .navbar-toggler .hamburger-icon span:nth-child(3) {
-    top: 20px;
+    top: 16px;
 }
 
 /* Hamburger icon animation */
